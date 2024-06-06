@@ -9,11 +9,7 @@ import { metadata } from './metadata';
 function MyApp({ Component, pageProps }) {
     return (
         <div className="min-h-screen flex flex-col">
-            <Head>
-        <title>Looks - {metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        {/* Other meta tags */}
-      </Head>
+            
             <SessionProvider session={pageProps.session}>
                 <Navbar {...pageProps} />
                 <main className="flex-grow">

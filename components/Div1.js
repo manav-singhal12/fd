@@ -144,7 +144,7 @@ const Div1 = () => {
       `<div className="relative md:w-[90vw] w-full ">
         <Slider {...settings}>
           {slides.map((slide, index) => (
-            <div className="flex">
+            <div className="flex" key={slide.id}>
               <div key={index} className="flex  md:flex md:flex-row w-screen">
                 <div className="left bg-pink-200 h-[85vh] w-[30vw] md:w-[30vw] md:h-[75vh] relative">
                   <div onClick={makeFavourite}>
