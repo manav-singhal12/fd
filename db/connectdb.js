@@ -1,5 +1,9 @@
 import mongoose from "mongoose";
 const connectDB=async()=>{
+    if (mongoose.connections[0].readyState) {
+        // If already connected, do not reconnect
+        return;
+      }
     try{
         const conn=await mongoose.connect(`mongodb://localhost:27017/sharara`,{
             // useNewUrlParser:true,
