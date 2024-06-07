@@ -7,7 +7,7 @@ const connectDB=async()=>{
     try{
         const conn=await mongoose.connect(`mongodb://localhost:27017/sharara`,{
             // useNewUrlParser:true,
-            useUnifiedTopology: true,
+            // useUnifiedTopology: true,
 
         });
         console.log(`Mongodb connexted:{conn.connection.host}`);
