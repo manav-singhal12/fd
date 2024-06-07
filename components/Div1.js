@@ -171,6 +171,9 @@ const Div1 = () => {
                   </div>
 
                   <div className="relative">
+                    <button onClick={PrevArrow} className=" absolute top-72  transform -translate-y-1/2 left-0 z-10 border-2 bg-customPink" >
+                      <Image src="/left.svg" width={40} height={40} alt="Previous" className="hover:scale-110 transition-transform duration-300" />
+                    </button>
                     {/* <div className="bg-white h-[20vw] md:h-[18vw] w-[20vw] md:w-[18vw] rounded-full absolute left-[10%] md:left-[15%] -top-[10%] md:top-[4vh]"></div> */}
                     <Image
                       alt={slide.alt}
@@ -199,7 +202,7 @@ const Div1 = () => {
                         <div className="bg-white md:h-12 md:w-12 h-4 w-4 rounded-full md:mx-4 mx-1 flex justify-center items-center text-customPink font-bold md:text-2xl text-xs">M</div>
                         <div className="bg-white md:h-12 md:w-12 h-4 w-4 rounded-full md:mx-4 mx-1 flex justify-center items-center text-customPink font-bold md:text-2xl text-xs">L</div>
                         <div className="bg-white md:h-12 md:w-12 h-4 w-4 rounded-full md:mx-4 mx-1 flex justify-center items-center text-customPink font-bold md:text-2xl text-xs">XL</div>
-                        
+
                       </div>
 
                     </div>
@@ -208,22 +211,22 @@ const Div1 = () => {
                     <div className="desc md:w-1/3 mx-2 mr-14">
                       <p className='font-bold text-customPink md:text-2xl'>Description</p>
                       <p2 className='text-xs md:text-lg leading-tight'>{slide.description}</p2>
-                      </div>
-                      <div className="desc md:w-1/3 mx-2 mr-14">
+                    </div>
+                    <div className="desc md:w-1/3 mx-2 mr-14">
                       <p className='font-bold text-customPink md:text-2xl'>Details</p>
                       <p2 className='text-xs md:text-lg leading-tight'>{slide.details}</p2>
-                      </div>
+                    </div>
                   </div>
                   <div onClick={() => { addToCart(slide.id, 1, slide.description, slide.price, slide.name, "S", "M", slide.image) }} className="bag absolute right-12 bottom-12 md:right-20 md:bottom-0 flex justify-center items-center flex-col rounded-sm  bg-customPink h-24 w-24 md:h-36 md:w-44 ">
-                      <span className=' '>
-                        <lord-icon
-                          src="https://cdn.lordicon.com/mqdkoaef.json"
-                          trigger="hover"
-                          style={{ width: '10vw', height: '10vh' }}
-                        ></lord-icon>
-                      </span>
-                      <p className='text-white md:text-xl text-sm'>Add to bag</p>
-                    </div>
+                    <span className=' '>
+                      <lord-icon
+                        src="https://cdn.lordicon.com/mqdkoaef.json"
+                        trigger="hover"
+                        style={{ width: '10vw', height: '10vh' }}
+                      ></lord-icon>
+                    </span>
+                    <p className='text-white md:text-xl text-sm'>Add to bag</p>
+                  </div>
 
                 </div>
 
