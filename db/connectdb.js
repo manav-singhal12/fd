@@ -5,7 +5,7 @@ const connectDB=async()=>{
         return;
       }
     try{
-        const conn=await mongoose.connect(`mongodb://localhost:27017/sharara`,{
+        const conn=await mongoose.connect(process.env.MONGODB_URI,{
             // useNewUrlParser:true,
             // useUnifiedTopology: true,
 
